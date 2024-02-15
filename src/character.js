@@ -1,19 +1,20 @@
 export default class Character {
-  constructor(name) {
+  constructor(name, type) {
+    const types = ['Bowerman', 'Swordsman', 'Deamon', 'Magician', 'Undead', 'Zombie'];
     if (
-      typeof name === 'string'
-      && name.length >= 2
-      && name.length <= 10
+      typeof name !== 'string' || name.length < 2 || name.length > 10
     ) {
-    //   this.name = name;
-      this.type = String();
-      this.health = 100;
-      this.level = 1;
-      this.attack = Number();
-      this.defence = Number();
-    } else {
       throw new Error('Invalid character');
     }
+    if (!types.includes(type)) {
+      throw new Error('Invalid type');
+    }
+    this.name = name;
+    this.type = type;
+    this.health = 100;
+    this.level = 1;
+    this.attack = null;
+    this.defence = null;
   }
 
   levelUp() {
