@@ -50,9 +50,9 @@ test('Character defence up', () => {
 
 test('Character attack up', () => {
   const character = new Character('Bop', 'Bowerman');
-  character.attack = 1;
+  character.attack = 100;
   character.levelUp();
-  expect(character.attack).toEqual(1.2);
+  expect(character.attack).toEqual(120);
 });
 
 test('Character health up', () => {

@@ -7,7 +7,7 @@ test('Undead create', () => {
     type: 'Undead',
     health: 100,
     level: 1,
-    attack: 25,
+    selfAttack: 25,
     defence: 25,
   };
   expect(obj).toEqual(correct);

@@ -7,8 +7,15 @@ test('Bowerman create', () => {
     type: 'Bowerman',
     health: 100,
     level: 1,
-    attack: 25,
+    selfAttack: 25,
     defence: 25,
   };
   expect(obj).toEqual(correct);
+});
+
+test('Bowerman not stoned', () => {
+  const obj = new Bowerman('Bob');
+  obj.attack = 100;
+  obj.attack = 2;
+  expect(obj.stoned).toEqual(undefined);
 });

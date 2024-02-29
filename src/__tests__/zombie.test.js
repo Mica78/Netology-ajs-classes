@@ -7,7 +7,7 @@ test('Zombie create', () => {
     type: 'Zombie',
     health: 100,
     level: 1,
-    attack: 40,
+    selfAttack: 40,
     defence: 10,
   };
   expect(obj).toEqual(correct);
